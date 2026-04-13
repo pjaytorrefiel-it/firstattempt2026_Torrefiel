@@ -2,7 +2,7 @@
 Torrefiel
 
 ## Framework
-Nuxt 3
+Nuxt JS
 
 ## Module
 Module 1: Document Request
