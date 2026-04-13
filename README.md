@@ -12,27 +12,35 @@ Module 1: Document Request
 
 ## Installation Guide
 
-Follow these steps to run the project on another computer:
+## Installation
 
-1. Clone the repository: 
+### 1. Install prerequisites
+Make sure you have the following installed:
+- Node.js (LTS recommended): https://nodejs.org
+- npm (comes with Node.js)
 
-git clone https://github.com/pjaytorrefiel-it/firstattempt2026_torrefiel.git
+Check if installed:
+node -v
+npm -v
 
-2. Navigate to the project folder: 
-
+### 2. Create Nuxt project (if not yet created)
+npx nuxi init firstattempt2026_torrefiel
 cd firstattempt2026_torrefiel
-
-
-3. Install dependencies:
-
 npm install
 
-4. Run the development server:
+### 3. Clone the repository (if using GitHub)
+git clone https://github.com/YOUR_USERNAME/firstattempt2026_torrefiel.git
 
+### 4. Go to project folder
+cd firstattempt2026_torrefiel
+
+### 5. Install dependencies
+npm install
+
+### 6. Run the project
 npm run dev
 
-5. Open in browser:
-
+### 7. Open in browser
 http://localhost:3000
 
 ---
