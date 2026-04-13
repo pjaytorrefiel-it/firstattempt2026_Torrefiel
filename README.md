@@ -1,4 +1,5 @@
-# Torrefiel
+# Title
+Torrefiel
 
 ## Framework
 Nuxt 3
@@ -266,8 +267,7 @@ Your goal is to:
 ---    
 
 ### Staff Login
-<img width="1321" height="822" alt="Screenshot 2026-04-13 084938" src="https://github.com/user-attachments/assets/d55ed684-aa1e-4162-8413-027c1c9a67c8" />
-
+<img width="1903" height="971" alt="staff-login" src="https://github.com/user-attachments/assets/3b172458-9558-479d-8697-0b91bf16b1b6" />
 
 ### Staff Dahsboard
 <img width="1917" height="908" alt="staff-dashboard" src="https://github.com/user-attachments/assets/920413b8-473b-4d79-9175-7dcd2990a06b" />
