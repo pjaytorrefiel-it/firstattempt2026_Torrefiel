@@ -49,7 +49,7 @@ http://localhost:3000
 
 1. Claude
 2. ChatGPT
-3. VS Code Copilot (Auto)
+3. VS Code - Github Copilot (Auto)
 
 ---
 
