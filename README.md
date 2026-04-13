@@ -29,7 +29,7 @@ cd firstattempt2026_torrefiel
 npm install
 
 ### 3. Clone the repository (if using GitHub)
-git clone https://github.com/YOUR_USERNAME/firstattempt2026_torrefiel.git
+git clone https://github.com/pjaytorrefiel-it/firstattempt2026_torrefiel.git
 
 ### 4. Go to project folder
 cd firstattempt2026_torrefiel
