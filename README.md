@@ -1,125 +1,282 @@
-# 🎓 Alumni Hub – Document Request System
-### Nuxt 3 Frontend — Faithful recreation of the Figma prototype
+# Torrefiel
+
+## Framework
+Nuxt 3
+
+## Module
+Module 1: Document Request
 
 ---
 
-## 📁 Project Structure
 
-```
-alumni-hub/
-├── app.vue                        # Root entry point
-├── nuxt.config.ts                 # Nuxt configuration
-├── package.json
-│
-├── assets/css/
-│   └── main.css                   # All global styles + design tokens
-│
-├── layouts/
-│   └── default.vue                # Mobile shell layout (centers 420px content)
-│
-├── composables/
-│   ├── useAppState.ts             # Shared state: role, currentRequest
-│   └── useMockData.ts             # All mock data (users, documents, requests)
-│
-├── components/
-│   ├── BottomNav.vue              # Bottom navigation bar (auto-switches by role)
-│   ├── FormInput.vue              # Reusable labeled input
-│   ├── RequestCard.vue            # Alumni request card (with status badge)
-│   └── StaffRequestCard.vue       # Staff request card (with approve/reject actions)
-│
-└── pages/
-    ├── index.vue                  # Login page (Alumni + Staff role selector)
-    │
-    ├── alumni/
-    │   ├── dashboard.vue          # Alumni Dashboard (stats, request CTA, links)
-    │   ├── profile.vue            # Alumni Profile (account info, logout)
-    │   ├── request.vue            # Document Selection (pick doc + price)
-    │   ├── appointment.vue        # Schedule Appointment (date + time picker)
-    │   ├── review.vue             # Review Request Summary (doc, date, price)
-    │   ├── tracker.vue            # Order Tracker (step-by-step status)
-    │   └── history.vue            # Transaction History (payments + receipts)
-    │
-    └── staff/
-        ├── dashboard.vue          # Staff Dashboard (stats + manage link)
-        ├── profile.vue            # Staff Profile (account info, logout)
-        └── filter.vue             # Status Filter (manage all requests)
-```
+## Installation Guide
 
----
+Follow these steps to run the project on another computer:
 
-## 🚀 How to Run
+1. Clone the repository: 
 
-### Prerequisites
-- Node.js 18+ installed
+git clone https://github.com/pjaytorrefiel-it/firstattempt2026_torrefiel.git
 
-### Steps
+2. Navigate to the project folder: 
 
-```bash
-# 1. Enter the project folder
-cd alumni-hub
+cd firstattempt2026_torrefiel
 
-# 2. Install dependencies
+
+3. Install dependencies:
+
 npm install
 
-# 3. Start development server
+4. Run the development server:
+
 npm run dev
 
-# 4. Open in browser
-# http://localhost:3000
-```
+5. Open in browser:
+
+http://localhost:3000
 
 ---
 
-## 🔐 Login & Roles
+## AI Tools used: 
 
-On the login page (`/`):
-- Select **Alumni** → logs in as alumni (Ruvic Santos)
-- Select **Staff** → logs in as staff (Admin Staff)
-
-No real authentication. Any email/password works. Click **Login** to proceed.
+1. Claude
+2. ChatGPT
+3. VS Code Copilot (Auto)
 
 ---
 
-## 📱 Page-by-Page Guide
+## Prompts
 
-### Alumni Flow
+### First Prompt
 
-| Page | Route | What it does |
-|------|-------|-------------|
-| Login | `/` | Role selector + login form |
-| Dashboard | `/alumni/dashboard` | Stats (pending/approved/ready), request CTA, quick links |
-| Profile | `/alumni/profile` | Account info (email, student ID, account type), logout |
-| Request | `/alumni/request` | Select document type and see prices |
-| Appointment | `/alumni/appointment` | Pick date and time for pickup |
-| Review | `/alumni/review` | Summary of doc, schedule, payment before submitting |
-| Tracker | `/alumni/tracker` | Real-time step tracker (Order Placed → Processing → QC → Delivery) |
-| History | `/alumni/history` | Past transactions with amounts and statuses |
+I have a high-fidelity Figma prototype for a school system called:
 
-### Staff Flow
+"Alumni Hub – Document Request System"
 
-| Page | Route | What it does |
-|------|-------|-------------|
-| Login | `/` | Same login, select Staff role |
-| Dashboard | `/staff/dashboard` | Stats summary, manage requests CTA, pending alert |
-| Profile | `/staff/profile` | Staff account info, logout |
-| Filter | `/staff/filter` | Filter requests by All/Pending/Approved/Rejected/Ready; approve/reject/mark ready |
+I want to recreate it EXACTLY as a Nuxt 3 WEB APPLICATION.
+
+IMPORTANT RULES:
+- This MUST be a WEB APP (desktop-first, but responsive)
+- DO NOT redesign anything
+- DO NOT change layout, structure, spacing, or flow
+- Keep the design EXACTLY the same as the Figma prototype
+- Convert the design into a responsive web layout WITHOUT changing its visual appearance
+- Maintain pixel-accuracy as much as possible
+- Use clean component-based structure
+- Use CSS or Tailwind for styling
+- Focus on replicating UI and UX exactly
+
+--------------------------------------------------
+
+RESPONSIVENESS REQUIREMENTS:
+
+- The design should look EXACT on desktop (primary target)
+- On smaller screens (tablet/mobile):
+  - Scale elements proportionally
+  - Stack layouts when needed (e.g., sidebars → top navigation or collapsible menu)
+  - Maintain spacing, alignment, and visual hierarchy
+  - DO NOT redesign — only adapt layout for responsiveness
+
+--------------------------------------------------
+
+SYSTEM OVERVIEW:
+
+There are TWO USER ROLES:
+
+1. Alumni
+2. Staff
+
+Each role has its own pages, dashboards, and features.
+
+--------------------------------------------------
+
+ALUMNI FLOW:
+
+1. Alumni Login Page
+- User logs in using university account
+- Purpose: track document requests and appointments
+
+2. Alumni Dashboard
+- Displays:
+  - Pending requests
+  - Approved requests
+  - Ready documents
+- User can track all requested documents
+
+3. Alumni Profile Page
+- Displays account information
+
+4. Document Request Selection Page
+- Shows list of available documents
+
+5. Appointment Selection Page
+- Shows:
+  - Document options
+  - Prices
+  - Available schedules
+
+6. Request Review Page
+- Shows summary:
+  - Selected document
+  - Date
+  - Time
+  - Price
+
+7. Order Tracker Page
+- Tracks status in real time:
+  - Processing
+  - Approved
+  - Ready for release
+
+8. Transaction History Page
+- Shows:
+  - Payment history
+  - Dates
+  - Amounts
+  - Receipts
+
+--------------------------------------------------
+
+STAFF FLOW:
+
+1. Staff Login Page
+- Login using university email
+
+2. Staff Dashboard
+- Displays:
+  - Pending requests
+  - Approved
+  - Ready documents
+
+3. Staff Profile Page
+- Shows staff account info
+
+4. Status Filter Page
+- Staff can filter requests by:
+  - Pending
+  - Approved
+  - Completed
+- Helps manage and approve requests
+
+--------------------------------------------------
+
+TECHNICAL REQUIREMENTS:
+
+- Use Nuxt 3
+- Use Vue 3 Composition API
+- Organize into:
+  - pages/
+  - components/
+  - layouts/
+
+Suggested pages structure:
+
+pages/
+- index.vue (login)
+- alumni/dashboard.vue
+- alumni/profile.vue
+- alumni/request.vue
+- alumni/appointment.vue
+- alumni/review.vue
+- alumni/tracker.vue
+- alumni/history.vue
+- staff/dashboard.vue
+- staff/profile.vue
+- staff/filter.vue
+
+components/
+- Navbar.vue
+- Sidebar.vue
+- RequestCard.vue
+- RequestTable.vue
+- FormInput.vue
+
+--------------------------------------------------
+
+STATE HANDLING:
+
+- No backend
+- Use mock data (arrays/objects)
+- Simulate request statuses
+- Implement simple role switching:
+
+Example:
+const role = "alumni" or "staff"
+
+--------------------------------------------------
+
+OUTPUT FORMAT:
+
+Provide:
+
+1. Complete folder structure
+2. All Nuxt files (pages, components, layouts)
+3. Sample mock data
+4. Styling (CSS or Tailwind)
+5. Navigation between pages
+6. Responsive layout handling
+7. Clean, readable, and maintainable code
+
+--------------------------------------------------
+
+EXTRA:
+
+Also explain briefly:
+- how each page works
+- how responsiveness is handled
+- how to run the project
+
+--------------------------------------------------
+
+IMPORTANT:
+
+This project is based on an EXISTING FIGMA DESIGN.
+
+Your goal is to:
+- replicate it as a WEB APPLICATION
+- keep the design visually identical
+- only adapt layout for responsiveness (NOT redesign)
 
 ---
 
-## 🎨 Design Notes
+## Screenshots
 
-- **Colors**: Navy blue (`#1a2b6b`) as primary — matches Figma exactly
-- **Fonts**: Playfair Display (headings) + DM Sans (body)
-- **Layout**: Mobile-first, 420px max-width centered on desktop
-- **No backend**: All state lives in Vue `ref()` and Nuxt `useState()` composables
-- **Status updates**: Clicking Approve/Reject/Mark Ready mutates the reactive `staffRequests` array instantly
+### Login Page Alumni
+<img width="1919" height="961" alt="alumni-login" src="https://github.com/user-attachments/assets/c33447ea-e5bc-4789-a255-abf11d8ab14a" />
 
----
 
-## 🛠 Tech Stack
+### Alumni Dashboard
+<img width="1914" height="971" alt="alumni-dashboard" src="https://github.com/user-attachments/assets/f79ee95a-654e-47db-8911-2502be479278" />
 
-- **Nuxt 3** (Vue 3 + auto-imports)
-- **Pure CSS** (no Tailwind needed — all styles in `assets/css/main.css`)
-- **CSS Variables** for design tokens
-- **Nuxt `useState`** for shared state across pages
-- **Vue `computed` + `ref`** for reactive filtering and mock data mutations
+
+### Request Page Alumni
+<img width="1914" height="965" alt="alumni-select" src="https://github.com/user-attachments/assets/9ee17d06-17a4-4367-b7e1-7230dc1d5a87" />
+
+### Schedule Alumni
+<img width="1914" height="965" alt="alumni-select" src="https://github.com/user-attachments/assets/a69a815e-bf0f-4b2b-bb67-9ef4befe39b6" />
+
+### Summary Order Alumni
+<img width="1919" height="899" alt="alumni-review-req" src="https://github.com/user-attachments/assets/95305a73-e684-420b-ac83-f28f7dab3d15" />
+
+### History of Orders Alumni
+<img width="1917" height="911" alt="alumni-myprofile" src="https://github.com/user-attachments/assets/c86bbc42-96d4-42e9-b508-d9ab394e9799" />
+
+### My Profile Alumni
+<img width="1917" height="911" alt="alumni-myprofile" src="https://github.com/user-attachments/assets/5c83bd9d-548d-4db7-a936-6695d5f44418" />
+
+---    
+
+### Staff Login
+<img width="1321" height="822" alt="Screenshot 2026-04-13 084938" src="https://github.com/user-attachments/assets/d55ed684-aa1e-4162-8413-027c1c9a67c8" />
+
+
+### Staff Dahsboard
+<img width="1917" height="908" alt="staff-dashboard" src="https://github.com/user-attachments/assets/920413b8-473b-4d79-9175-7dcd2990a06b" />
+
+### Staff Management
+<img width="1919" height="907" alt="staff-management" src="https://github.com/user-attachments/assets/d6a629ea-d596-484a-9af2-760c5ebd11f3" />
+
+### Staff My Profile
+<img width="1919" height="960" alt="staff-myprofile" src="https://github.com/user-attachments/assets/c4484a79-77f1-46af-9a10-dee8919c79e3" />
+
+
+
