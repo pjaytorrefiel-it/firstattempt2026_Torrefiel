@@ -9,6 +9,18 @@ Module 1: Document Request
 
 ---
 
+## ACTIVITY 15 PROMPT
+
+I am working with Nuxt 3 and currently have a static framework-based project. I want to convert it into a high-performance Progressive Web App (PWA) that works offline and behaves like a native app.
+Please guide me step-by-step and help me implement the following properly:
+A valid manifest.webmanifest (including name, icons, theme colors, and display mode)
+Service worker setup using best practices (preferably using @vite-pwa/nuxt if applicable)
+Offline caching strategies (cache-first / network-first where appropriate)
+Proper PWA icon generation and configuration for all required sizes
+Correct service worker registration in Nuxt 3
+Performance optimizations for PWA (lazy loading, caching static assets, etc.)
+Ensure the final setup is production-ready, installable, and passes PWA audit checks (Lighthouse).
+Also, explain where I need to click or edit files in a clear step-by-step manner since I may need guidance on file locations and configuration placement.
 
 ## Installation Guide
 
@@ -279,6 +291,9 @@ Your goal is to:
 
 ### Staff Dahsboard
 <img width="1917" height="908" alt="staff-dashboard" src="https://github.com/user-attachments/assets/920413b8-473b-4d79-9175-7dcd2990a06b" />
+
+
+
 
 ### Staff Management
 <img width="1919" height="907" alt="staff-management" src="https://github.com/user-attachments/assets/d6a629ea-d596-484a-9af2-760c5ebd11f3" />
