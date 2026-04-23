@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Nuxt build output
+.nuxt/
+dist/
+.nuxt-dev/
+.nitro/
+
+# Local environment files
+.env
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE files
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

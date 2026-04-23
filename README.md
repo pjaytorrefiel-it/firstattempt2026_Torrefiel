@@ -123,3 +123,21 @@ No real authentication. Any email/password works. Click **Login** to proceed.
 - **CSS Variables** for design tokens
 - **Nuxt `useState`** for shared state across pages
 - **Vue `computed` + `ref`** for reactive filtering and mock data mutations
+
+---
+
+## ✅ PWA Transformation
+
+- Branch: `feature/pwa-ready`
+- Status: install prompt appears in Chrome, manifest detected, service worker registered, offline assets cached.
+
+### Master Prompt
+
+> I am using Nuxt 3. Help me convert this static framework-based project into a high-performance offline-ready Progressive Web App with a valid manifest, service worker registration, caching strategies, and PWA icons.
+
+### Manual fixes / hallucinations
+
+- Added an explicit `link rel="manifest" href="/manifest.webmanifest"` entry in `nuxt.config.ts` because Chrome did not detect the generated manifest automatically.
+- Added `scope`, `start_url`, and screenshot metadata to the manifest to improve install UI and remove Chrome warnings.
+- Created `.gitignore` and removed generated `.nuxt/` and `node_modules/` from git tracking so the repo stays clean.
+- Verified the install button by restarting the dev server and hard-refreshing Chrome.
